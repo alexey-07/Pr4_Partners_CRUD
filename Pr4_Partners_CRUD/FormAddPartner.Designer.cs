@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             flowLayoutPanelBottom = new FlowLayoutPanel();
             buttonCancel = new Button();
             buttonAdd = new Button();
@@ -48,8 +49,22 @@
             labelName = new Label();
             comboBoxTypes = new ComboBox();
             labelType = new Label();
+            errorProviderName = new ErrorProvider(components);
+            errorProviderAdress = new ErrorProvider(components);
+            errorProviderInn = new ErrorProvider(components);
+            errorProviderDirectory = new ErrorProvider(components);
+            errorProviderNumber = new ErrorProvider(components);
+            errorProviderMail = new ErrorProvider(components);
+            errorProviderRaiting = new ErrorProvider(components);
             flowLayoutPanelBottom.SuspendLayout();
             panelFill.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)errorProviderName).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)errorProviderAdress).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)errorProviderInn).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)errorProviderDirectory).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)errorProviderNumber).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)errorProviderMail).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)errorProviderRaiting).BeginInit();
             SuspendLayout();
             // 
             // flowLayoutPanelBottom
@@ -64,7 +79,7 @@
             flowLayoutPanelBottom.Name = "flowLayoutPanelBottom";
             flowLayoutPanelBottom.Padding = new Padding(12);
             flowLayoutPanelBottom.Size = new Size(541, 77);
-            flowLayoutPanelBottom.TabIndex = 0;
+            flowLayoutPanelBottom.TabIndex = 1;
             // 
             // buttonCancel
             // 
@@ -117,21 +132,23 @@
             panelFill.Name = "panelFill";
             panelFill.Padding = new Padding(15);
             panelFill.Size = new Size(541, 684);
-            panelFill.TabIndex = 1;
+            panelFill.TabIndex = 0;
             // 
             // textBoxRating
             // 
             textBoxRating.Dock = DockStyle.Top;
-            textBoxRating.Location = new Point(15, 633);
+            textBoxRating.Location = new Point(15, 604);
             textBoxRating.Name = "textBoxRating";
             textBoxRating.Size = new Size(511, 32);
-            textBoxRating.TabIndex = 29;
+            textBoxRating.TabIndex = 6;
+            textBoxRating.TextChanged += textBoxRating_TextChanged;
+            textBoxRating.Validated += textBoxRating_Validated;
             // 
             // labelRaiting
             // 
             labelRaiting.AutoSize = true;
             labelRaiting.Dock = DockStyle.Top;
-            labelRaiting.Location = new Point(15, 588);
+            labelRaiting.Location = new Point(15, 559);
             labelRaiting.Margin = new Padding(4, 0, 4, 0);
             labelRaiting.Name = "labelRaiting";
             labelRaiting.Padding = new Padding(0, 10, 0, 10);
@@ -142,16 +159,18 @@
             // textBoxEmail
             // 
             textBoxEmail.Dock = DockStyle.Top;
-            textBoxEmail.Location = new Point(15, 556);
+            textBoxEmail.Location = new Point(15, 527);
             textBoxEmail.Name = "textBoxEmail";
             textBoxEmail.Size = new Size(511, 32);
-            textBoxEmail.TabIndex = 27;
+            textBoxEmail.TabIndex = 5;
+            textBoxEmail.TextChanged += textBoxEmail_TextChanged;
+            textBoxEmail.Validated += textBoxEmail_Validated;
             // 
             // labelMail
             // 
             labelMail.AutoSize = true;
             labelMail.Dock = DockStyle.Top;
-            labelMail.Location = new Point(15, 511);
+            labelMail.Location = new Point(15, 482);
             labelMail.Margin = new Padding(4, 0, 4, 0);
             labelMail.Name = "labelMail";
             labelMail.Padding = new Padding(0, 10, 0, 10);
@@ -162,16 +181,18 @@
             // textBoxPhoneNumber
             // 
             textBoxPhoneNumber.Dock = DockStyle.Top;
-            textBoxPhoneNumber.Location = new Point(15, 479);
+            textBoxPhoneNumber.Location = new Point(15, 450);
             textBoxPhoneNumber.Name = "textBoxPhoneNumber";
             textBoxPhoneNumber.Size = new Size(511, 32);
-            textBoxPhoneNumber.TabIndex = 25;
+            textBoxPhoneNumber.TabIndex = 4;
+            textBoxPhoneNumber.TextChanged += textBoxPhoneNumber_TextChanged;
+            textBoxPhoneNumber.Validated += textBoxPhoneNumber_Validated;
             // 
             // labelNumber
             // 
             labelNumber.AutoSize = true;
             labelNumber.Dock = DockStyle.Top;
-            labelNumber.Location = new Point(15, 434);
+            labelNumber.Location = new Point(15, 405);
             labelNumber.Margin = new Padding(4, 0, 4, 0);
             labelNumber.Name = "labelNumber";
             labelNumber.Padding = new Padding(0, 10, 0, 10);
@@ -182,16 +203,18 @@
             // textBoxDirectorFullName
             // 
             textBoxDirectorFullName.Dock = DockStyle.Top;
-            textBoxDirectorFullName.Location = new Point(15, 402);
+            textBoxDirectorFullName.Location = new Point(15, 373);
             textBoxDirectorFullName.Name = "textBoxDirectorFullName";
             textBoxDirectorFullName.Size = new Size(511, 32);
-            textBoxDirectorFullName.TabIndex = 23;
+            textBoxDirectorFullName.TabIndex = 3;
+            textBoxDirectorFullName.TextChanged += textBoxDirectorFullName_TextChanged;
+            textBoxDirectorFullName.Validated += textBoxDirectorFullName_Validated;
             // 
             // labelDirectory
             // 
             labelDirectory.AutoSize = true;
             labelDirectory.Dock = DockStyle.Top;
-            labelDirectory.Location = new Point(15, 357);
+            labelDirectory.Location = new Point(15, 328);
             labelDirectory.Margin = new Padding(4, 0, 4, 0);
             labelDirectory.Name = "labelDirectory";
             labelDirectory.Padding = new Padding(0, 10, 0, 10);
@@ -202,16 +225,18 @@
             // textBoxINN
             // 
             textBoxINN.Dock = DockStyle.Top;
-            textBoxINN.Location = new Point(15, 325);
+            textBoxINN.Location = new Point(15, 296);
             textBoxINN.Name = "textBoxINN";
             textBoxINN.Size = new Size(511, 32);
-            textBoxINN.TabIndex = 21;
+            textBoxINN.TabIndex = 2;
+            textBoxINN.TextChanged += textBoxINN_TextChanged;
+            textBoxINN.Validated += textBoxINN_Validated;
             // 
             // labelInn
             // 
             labelInn.AutoSize = true;
             labelInn.Dock = DockStyle.Top;
-            labelInn.Location = new Point(15, 280);
+            labelInn.Location = new Point(15, 251);
             labelInn.Margin = new Padding(4, 0, 4, 0);
             labelInn.Name = "labelInn";
             labelInn.Padding = new Padding(0, 10, 0, 10);
@@ -225,8 +250,10 @@
             textBoxAdress.Location = new Point(15, 215);
             textBoxAdress.Multiline = true;
             textBoxAdress.Name = "textBoxAdress";
-            textBoxAdress.Size = new Size(511, 65);
-            textBoxAdress.TabIndex = 19;
+            textBoxAdress.Size = new Size(511, 36);
+            textBoxAdress.TabIndex = 1;
+            textBoxAdress.TextChanged += textBoxAdress_TextChanged;
+            textBoxAdress.Validated += textBoxAdress_Validated;
             // 
             // labelAdress
             // 
@@ -248,7 +275,9 @@
             textBoxName.Name = "textBoxName";
             textBoxName.ScrollBars = ScrollBars.Horizontal;
             textBoxName.Size = new Size(511, 32);
-            textBoxName.TabIndex = 17;
+            textBoxName.TabIndex = 0;
+            textBoxName.TextChanged += textBoxName_TextChanged;
+            textBoxName.Validated += textBoxName_Validated;
             // 
             // labelName
             // 
@@ -284,6 +313,34 @@
             labelType.TabIndex = 0;
             labelType.Text = "Тип партнера:";
             // 
+            // errorProviderName
+            // 
+            errorProviderName.ContainerControl = this;
+            // 
+            // errorProviderAdress
+            // 
+            errorProviderAdress.ContainerControl = this;
+            // 
+            // errorProviderInn
+            // 
+            errorProviderInn.ContainerControl = this;
+            // 
+            // errorProviderDirectory
+            // 
+            errorProviderDirectory.ContainerControl = this;
+            // 
+            // errorProviderNumber
+            // 
+            errorProviderNumber.ContainerControl = this;
+            // 
+            // errorProviderMail
+            // 
+            errorProviderMail.ContainerControl = this;
+            // 
+            // errorProviderRaiting
+            // 
+            errorProviderRaiting.ContainerControl = this;
+            // 
             // FormAddPartner
             // 
             AutoScaleDimensions = new SizeF(11F, 25F);
@@ -301,6 +358,13 @@
             flowLayoutPanelBottom.ResumeLayout(false);
             panelFill.ResumeLayout(false);
             panelFill.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)errorProviderName).EndInit();
+            ((System.ComponentModel.ISupportInitialize)errorProviderAdress).EndInit();
+            ((System.ComponentModel.ISupportInitialize)errorProviderInn).EndInit();
+            ((System.ComponentModel.ISupportInitialize)errorProviderDirectory).EndInit();
+            ((System.ComponentModel.ISupportInitialize)errorProviderNumber).EndInit();
+            ((System.ComponentModel.ISupportInitialize)errorProviderMail).EndInit();
+            ((System.ComponentModel.ISupportInitialize)errorProviderRaiting).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -327,5 +391,12 @@
         private Label labelAdress;
         protected internal TextBox textBoxName;
         private Label labelName;
+        private ErrorProvider errorProviderName;
+        private ErrorProvider errorProviderAdress;
+        private ErrorProvider errorProviderInn;
+        private ErrorProvider errorProviderDirectory;
+        private ErrorProvider errorProviderNumber;
+        private ErrorProvider errorProviderMail;
+        private ErrorProvider errorProviderRaiting;
     }
 }

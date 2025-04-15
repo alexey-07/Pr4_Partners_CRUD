@@ -28,6 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             flowLayoutPanel1 = new FlowLayoutPanel();
             labelPartnerName = new Label();
             panel1 = new Panel();
@@ -77,13 +80,25 @@
             // 
             dataGridViewPartnersProducts.AllowUserToAddRows = false;
             dataGridViewPartnersProducts.AllowUserToDeleteRows = false;
+            dataGridViewCellStyle1.SelectionBackColor = Color.FromArgb(103, 186, 128);
+            dataGridViewPartnersProducts.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             dataGridViewPartnersProducts.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.DisplayedCells;
             dataGridViewPartnersProducts.BackgroundColor = Color.White;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = SystemColors.Control;
+            dataGridViewCellStyle2.Font = new Font("Segoe UI", 14F);
+            dataGridViewCellStyle2.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = Color.FromArgb(0, 192, 0);
+            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
+            dataGridViewPartnersProducts.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             dataGridViewPartnersProducts.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewPartnersProducts.Dock = DockStyle.Fill;
             dataGridViewPartnersProducts.Location = new Point(10, 10);
             dataGridViewPartnersProducts.Name = "dataGridViewPartnersProducts";
             dataGridViewPartnersProducts.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
+            dataGridViewCellStyle3.SelectionBackColor = Color.FromArgb(103, 186, 128);
+            dataGridViewPartnersProducts.RowsDefaultCellStyle = dataGridViewCellStyle3;
             dataGridViewPartnersProducts.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dataGridViewPartnersProducts.Size = new Size(914, 518);
             dataGridViewPartnersProducts.TabIndex = 0;
