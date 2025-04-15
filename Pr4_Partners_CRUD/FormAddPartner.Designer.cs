@@ -29,23 +29,23 @@
         private void InitializeComponent()
         {
             flowLayoutPanelBottom = new FlowLayoutPanel();
-            buttonAdd = new Button();
             buttonCancel = new Button();
+            buttonAdd = new Button();
             panelFill = new Panel();
             textBoxRating = new TextBox();
-            label7 = new Label();
+            labelRaiting = new Label();
             textBoxEmail = new TextBox();
-            label6 = new Label();
+            labelMail = new Label();
             textBoxPhoneNumber = new TextBox();
-            label5 = new Label();
+            labelNumber = new Label();
             textBoxDirectorFullName = new TextBox();
-            label4 = new Label();
+            labelDirectory = new Label();
             textBoxINN = new TextBox();
-            label3 = new Label();
+            labelInn = new Label();
             textBoxAdress = new TextBox();
-            label2 = new Label();
+            labelAdress = new Label();
             textBoxName = new TextBox();
-            label1 = new Label();
+            labelName = new Label();
             comboBoxTypes = new ComboBox();
             labelType = new Label();
             flowLayoutPanelBottom.SuspendLayout();
@@ -66,19 +66,6 @@
             flowLayoutPanelBottom.Size = new Size(541, 77);
             flowLayoutPanelBottom.TabIndex = 0;
             // 
-            // buttonAdd
-            // 
-            buttonAdd.BackColor = Color.FromArgb(103, 186, 128);
-            buttonAdd.DialogResult = DialogResult.OK;
-            buttonAdd.FlatStyle = FlatStyle.Flat;
-            buttonAdd.Location = new Point(184, 16);
-            buttonAdd.Margin = new Padding(4);
-            buttonAdd.Name = "buttonAdd";
-            buttonAdd.Size = new Size(160, 45);
-            buttonAdd.TabIndex = 0;
-            buttonAdd.Text = "Добавить";
-            buttonAdd.UseVisualStyleBackColor = false;
-            // 
             // buttonCancel
             // 
             buttonCancel.BackColor = Color.FromArgb(103, 186, 128);
@@ -92,23 +79,36 @@
             buttonCancel.Text = "Отмена";
             buttonCancel.UseVisualStyleBackColor = false;
             // 
+            // buttonAdd
+            // 
+            buttonAdd.BackColor = Color.FromArgb(103, 186, 128);
+            buttonAdd.DialogResult = DialogResult.OK;
+            buttonAdd.FlatStyle = FlatStyle.Flat;
+            buttonAdd.Location = new Point(184, 16);
+            buttonAdd.Margin = new Padding(4);
+            buttonAdd.Name = "buttonAdd";
+            buttonAdd.Size = new Size(160, 45);
+            buttonAdd.TabIndex = 0;
+            buttonAdd.Text = "Добавить";
+            buttonAdd.UseVisualStyleBackColor = false;
+            // 
             // panelFill
             // 
             panelFill.BackColor = Color.White;
             panelFill.Controls.Add(textBoxRating);
-            panelFill.Controls.Add(label7);
+            panelFill.Controls.Add(labelRaiting);
             panelFill.Controls.Add(textBoxEmail);
-            panelFill.Controls.Add(label6);
+            panelFill.Controls.Add(labelMail);
             panelFill.Controls.Add(textBoxPhoneNumber);
-            panelFill.Controls.Add(label5);
+            panelFill.Controls.Add(labelNumber);
             panelFill.Controls.Add(textBoxDirectorFullName);
-            panelFill.Controls.Add(label4);
+            panelFill.Controls.Add(labelDirectory);
             panelFill.Controls.Add(textBoxINN);
-            panelFill.Controls.Add(label3);
+            panelFill.Controls.Add(labelInn);
             panelFill.Controls.Add(textBoxAdress);
-            panelFill.Controls.Add(label2);
+            panelFill.Controls.Add(labelAdress);
             panelFill.Controls.Add(textBoxName);
-            panelFill.Controls.Add(label1);
+            panelFill.Controls.Add(labelName);
             panelFill.Controls.Add(comboBoxTypes);
             panelFill.Controls.Add(labelType);
             panelFill.Dock = DockStyle.Fill;
@@ -127,17 +127,17 @@
             textBoxRating.Size = new Size(511, 32);
             textBoxRating.TabIndex = 29;
             // 
-            // label7
+            // labelRaiting
             // 
-            label7.AutoSize = true;
-            label7.Dock = DockStyle.Top;
-            label7.Location = new Point(15, 588);
-            label7.Margin = new Padding(4, 0, 4, 0);
-            label7.Name = "label7";
-            label7.Padding = new Padding(0, 10, 0, 10);
-            label7.Size = new Size(85, 45);
-            label7.TabIndex = 28;
-            label7.Text = "Рейтинг:";
+            labelRaiting.AutoSize = true;
+            labelRaiting.Dock = DockStyle.Top;
+            labelRaiting.Location = new Point(15, 588);
+            labelRaiting.Margin = new Padding(4, 0, 4, 0);
+            labelRaiting.Name = "labelRaiting";
+            labelRaiting.Padding = new Padding(0, 10, 0, 10);
+            labelRaiting.Size = new Size(85, 45);
+            labelRaiting.TabIndex = 28;
+            labelRaiting.Text = "Рейтинг:";
             // 
             // textBoxEmail
             // 
@@ -147,17 +147,17 @@
             textBoxEmail.Size = new Size(511, 32);
             textBoxEmail.TabIndex = 27;
             // 
-            // label6
+            // labelMail
             // 
-            label6.AutoSize = true;
-            label6.Dock = DockStyle.Top;
-            label6.Location = new Point(15, 511);
-            label6.Margin = new Padding(4, 0, 4, 0);
-            label6.Name = "label6";
-            label6.Padding = new Padding(0, 10, 0, 10);
-            label6.Size = new Size(185, 45);
-            label6.TabIndex = 26;
-            label6.Text = "Электронная почта:";
+            labelMail.AutoSize = true;
+            labelMail.Dock = DockStyle.Top;
+            labelMail.Location = new Point(15, 511);
+            labelMail.Margin = new Padding(4, 0, 4, 0);
+            labelMail.Name = "labelMail";
+            labelMail.Padding = new Padding(0, 10, 0, 10);
+            labelMail.Size = new Size(185, 45);
+            labelMail.TabIndex = 26;
+            labelMail.Text = "Электронная почта:";
             // 
             // textBoxPhoneNumber
             // 
@@ -167,17 +167,17 @@
             textBoxPhoneNumber.Size = new Size(511, 32);
             textBoxPhoneNumber.TabIndex = 25;
             // 
-            // label5
+            // labelNumber
             // 
-            label5.AutoSize = true;
-            label5.Dock = DockStyle.Top;
-            label5.Location = new Point(15, 434);
-            label5.Margin = new Padding(4, 0, 4, 0);
-            label5.Name = "label5";
-            label5.Padding = new Padding(0, 10, 0, 10);
-            label5.Size = new Size(162, 45);
-            label5.TabIndex = 24;
-            label5.Text = "Номер телефона:";
+            labelNumber.AutoSize = true;
+            labelNumber.Dock = DockStyle.Top;
+            labelNumber.Location = new Point(15, 434);
+            labelNumber.Margin = new Padding(4, 0, 4, 0);
+            labelNumber.Name = "labelNumber";
+            labelNumber.Padding = new Padding(0, 10, 0, 10);
+            labelNumber.Size = new Size(162, 45);
+            labelNumber.TabIndex = 24;
+            labelNumber.Text = "Номер телефона:";
             // 
             // textBoxDirectorFullName
             // 
@@ -187,17 +187,17 @@
             textBoxDirectorFullName.Size = new Size(511, 32);
             textBoxDirectorFullName.TabIndex = 23;
             // 
-            // label4
+            // labelDirectory
             // 
-            label4.AutoSize = true;
-            label4.Dock = DockStyle.Top;
-            label4.Location = new Point(15, 357);
-            label4.Margin = new Padding(4, 0, 4, 0);
-            label4.Name = "label4";
-            label4.Padding = new Padding(0, 10, 0, 10);
-            label4.Size = new Size(154, 45);
-            label4.TabIndex = 22;
-            label4.Text = "ФИО директора:";
+            labelDirectory.AutoSize = true;
+            labelDirectory.Dock = DockStyle.Top;
+            labelDirectory.Location = new Point(15, 357);
+            labelDirectory.Margin = new Padding(4, 0, 4, 0);
+            labelDirectory.Name = "labelDirectory";
+            labelDirectory.Padding = new Padding(0, 10, 0, 10);
+            labelDirectory.Size = new Size(154, 45);
+            labelDirectory.TabIndex = 22;
+            labelDirectory.Text = "ФИО директора:";
             // 
             // textBoxINN
             // 
@@ -207,17 +207,17 @@
             textBoxINN.Size = new Size(511, 32);
             textBoxINN.TabIndex = 21;
             // 
-            // label3
+            // labelInn
             // 
-            label3.AutoSize = true;
-            label3.Dock = DockStyle.Top;
-            label3.Location = new Point(15, 280);
-            label3.Margin = new Padding(4, 0, 4, 0);
-            label3.Name = "label3";
-            label3.Padding = new Padding(0, 10, 0, 10);
-            label3.Size = new Size(56, 45);
-            label3.TabIndex = 20;
-            label3.Text = "ИНН:";
+            labelInn.AutoSize = true;
+            labelInn.Dock = DockStyle.Top;
+            labelInn.Location = new Point(15, 280);
+            labelInn.Margin = new Padding(4, 0, 4, 0);
+            labelInn.Name = "labelInn";
+            labelInn.Padding = new Padding(0, 10, 0, 10);
+            labelInn.Size = new Size(56, 45);
+            labelInn.TabIndex = 20;
+            labelInn.Text = "ИНН:";
             // 
             // textBoxAdress
             // 
@@ -228,17 +228,17 @@
             textBoxAdress.Size = new Size(511, 65);
             textBoxAdress.TabIndex = 19;
             // 
-            // label2
+            // labelAdress
             // 
-            label2.AutoSize = true;
-            label2.Dock = DockStyle.Top;
-            label2.Location = new Point(15, 170);
-            label2.Margin = new Padding(4, 0, 4, 0);
-            label2.Name = "label2";
-            label2.Padding = new Padding(0, 10, 0, 10);
-            label2.Size = new Size(68, 45);
-            label2.TabIndex = 18;
-            label2.Text = "Адрес:";
+            labelAdress.AutoSize = true;
+            labelAdress.Dock = DockStyle.Top;
+            labelAdress.Location = new Point(15, 170);
+            labelAdress.Margin = new Padding(4, 0, 4, 0);
+            labelAdress.Name = "labelAdress";
+            labelAdress.Padding = new Padding(0, 10, 0, 10);
+            labelAdress.Size = new Size(68, 45);
+            labelAdress.TabIndex = 18;
+            labelAdress.Text = "Адрес:";
             // 
             // textBoxName
             // 
@@ -250,17 +250,17 @@
             textBoxName.Size = new Size(511, 32);
             textBoxName.TabIndex = 17;
             // 
-            // label1
+            // labelName
             // 
-            label1.AutoSize = true;
-            label1.Dock = DockStyle.Top;
-            label1.Location = new Point(15, 93);
-            label1.Margin = new Padding(4, 0, 4, 0);
-            label1.Name = "label1";
-            label1.Padding = new Padding(0, 10, 0, 10);
-            label1.Size = new Size(99, 45);
-            label1.TabIndex = 16;
-            label1.Text = "Название:";
+            labelName.AutoSize = true;
+            labelName.Dock = DockStyle.Top;
+            labelName.Location = new Point(15, 93);
+            labelName.Margin = new Padding(4, 0, 4, 0);
+            labelName.Name = "labelName";
+            labelName.Padding = new Padding(0, 10, 0, 10);
+            labelName.Size = new Size(99, 45);
+            labelName.TabIndex = 16;
+            labelName.Text = "Название:";
             // 
             // comboBoxTypes
             // 
@@ -314,18 +314,18 @@
         protected internal ComboBox comboBoxTypes;
         protected internal Button buttonAdd;
         protected internal TextBox textBoxRating;
-        private Label label7;
+        private Label labelRaiting;
         protected internal TextBox textBoxEmail;
-        private Label label6;
+        private Label labelMail;
         protected internal TextBox textBoxPhoneNumber;
-        private Label label5;
+        private Label labelNumber;
         protected internal TextBox textBoxDirectorFullName;
-        private Label label4;
+        private Label labelDirectory;
         protected internal TextBox textBoxINN;
-        private Label label3;
+        private Label labelInn;
         protected internal TextBox textBoxAdress;
-        private Label label2;
+        private Label labelAdress;
         protected internal TextBox textBoxName;
-        private Label label1;
+        private Label labelName;
     }
 }

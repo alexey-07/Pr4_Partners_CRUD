@@ -23,7 +23,7 @@ namespace Pr4_Partners_CRUD
             }
 
             _selectedPanel = (Panel)sender;
-            _selectedPanel.BackColor = Color.Azure;
+            _selectedPanel.BackColor = Color.AliceBlue;
         }
 
         private void ButtonAddPartner_Click(object sender, System.EventArgs e)

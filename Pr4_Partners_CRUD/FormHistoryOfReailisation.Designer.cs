@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             flowLayoutPanel1 = new FlowLayoutPanel();
-            buttonGetBack = new Button();
             labelPartnerName = new Label();
             panel1 = new Panel();
             dataGridViewPartnersProducts = new DataGridView();
@@ -42,36 +41,23 @@
             // 
             flowLayoutPanel1.AutoSize = true;
             flowLayoutPanel1.BackColor = Color.FromArgb(244, 232, 211);
-            flowLayoutPanel1.Controls.Add(buttonGetBack);
             flowLayoutPanel1.Controls.Add(labelPartnerName);
             flowLayoutPanel1.Dock = DockStyle.Top;
             flowLayoutPanel1.Location = new Point(0, 0);
             flowLayoutPanel1.Margin = new Padding(4);
             flowLayoutPanel1.Name = "flowLayoutPanel1";
             flowLayoutPanel1.Padding = new Padding(12);
-            flowLayoutPanel1.Size = new Size(934, 77);
+            flowLayoutPanel1.Size = new Size(934, 49);
             flowLayoutPanel1.TabIndex = 0;
-            // 
-            // buttonGetBack
-            // 
-            buttonGetBack.BackColor = Color.FromArgb(103, 186, 128);
-            buttonGetBack.DialogResult = DialogResult.Cancel;
-            buttonGetBack.FlatStyle = FlatStyle.Flat;
-            buttonGetBack.Location = new Point(16, 16);
-            buttonGetBack.Margin = new Padding(4);
-            buttonGetBack.Name = "buttonGetBack";
-            buttonGetBack.Size = new Size(160, 45);
-            buttonGetBack.TabIndex = 0;
-            buttonGetBack.Text = "Назад";
-            buttonGetBack.UseVisualStyleBackColor = false;
             // 
             // labelPartnerName
             // 
             labelPartnerName.AutoSize = true;
+            labelPartnerName.BackColor = Color.FromArgb(103, 186, 128);
             labelPartnerName.Dock = DockStyle.Fill;
-            labelPartnerName.Location = new Point(183, 12);
+            labelPartnerName.Location = new Point(15, 12);
             labelPartnerName.Name = "labelPartnerName";
-            labelPartnerName.Size = new Size(87, 53);
+            labelPartnerName.Size = new Size(87, 25);
             labelPartnerName.TabIndex = 1;
             labelPartnerName.Text = "Партнер";
             labelPartnerName.TextAlign = ContentAlignment.MiddleCenter;
@@ -81,10 +67,10 @@
             panel1.BackColor = Color.White;
             panel1.Controls.Add(dataGridViewPartnersProducts);
             panel1.Dock = DockStyle.Fill;
-            panel1.Location = new Point(0, 77);
+            panel1.Location = new Point(0, 49);
             panel1.Name = "panel1";
             panel1.Padding = new Padding(10);
-            panel1.Size = new Size(934, 510);
+            panel1.Size = new Size(934, 538);
             panel1.TabIndex = 1;
             // 
             // dataGridViewPartnersProducts
@@ -99,7 +85,7 @@
             dataGridViewPartnersProducts.Name = "dataGridViewPartnersProducts";
             dataGridViewPartnersProducts.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
             dataGridViewPartnersProducts.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dataGridViewPartnersProducts.Size = new Size(914, 490);
+            dataGridViewPartnersProducts.Size = new Size(914, 518);
             dataGridViewPartnersProducts.TabIndex = 0;
             // 
             // FormHistoryOfReailisation
@@ -125,7 +111,6 @@
         #endregion
 
         private FlowLayoutPanel flowLayoutPanel1;
-        private Button buttonGetBack;
         private Panel panel1;
         private DataGridView dataGridViewPartnersProducts;
         private Label labelPartnerName;

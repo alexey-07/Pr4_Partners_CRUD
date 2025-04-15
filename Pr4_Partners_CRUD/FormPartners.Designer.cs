@@ -154,7 +154,7 @@
             Margin = new Padding(5);
             Name = "FormPartners";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "Партнеры";
+            Text = "Partners";
             Load += FormPartners_Load;
             flowLayoutPanelTop.ResumeLayout(false);
             flowLayoutPanelTop.PerformLayout();
